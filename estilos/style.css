@@ -221,6 +221,7 @@ nav a:hover::after{
 
 .bola:hover{
     transform: translateX(-7px);
+    box-shadow: 8px 0 rgb(73, 65, 190);
 }
 
 .bola img{
@@ -392,7 +393,8 @@ footer .logo{
     }
 
     #produtos{
-        height: 69vh;
+        height: auto;
+        padding: 70px 0;
     }
 
     #home .dir{
@@ -474,6 +476,7 @@ footer .logo{
     .coluna .bola:hover{
         transform: translateX(0);
         transform: translateY(-7px);
+        box-shadow: 0 8px rgb(73, 65, 190);
     }
 }
 
@@ -485,6 +488,10 @@ footer .logo{
 }
 
 @media (max-width: 388px){
+
+    #home .dir img{
+        width: 280px;
+    }
     #produtos .prin img{
         max-width: 260px;
     }
