@@ -232,7 +232,7 @@ nav a:hover::after{
     background-color: pink;
 }
 .bola:nth-child(3){
-    background-color: orangered;
+    background-color: rgb(86, 199, 120);
 }
 
 #empresa{
