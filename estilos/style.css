@@ -186,10 +186,10 @@ nav a:hover::after{
     background-color: rgb(236, 108, 61);
     width: 320px;
     height: 320px;
-    right: -90px;
+    right: 80px;
     transform: rotate(40deg);
-    box-shadow: -200px 175px rgb(23, 114, 156), -300px 275px rgb(41, 126, 112) ,
-     -400px 320px rgb(25, 81, 85), -500px 420px rgb(129, 31, 129), -600px 520px rgb(109, 186, 209);
+    box-shadow: -100px 75px rgb(23, 114, 156), -200px 175px rgb(41, 126, 112) ,
+     -300px 220px rgb(25, 81, 85), -400px 320px rgb(129, 31, 129), -500px 420px rgb(109, 186, 209);
 }
 
 .coluna{
@@ -392,7 +392,7 @@ footer .logo{
     }
 
     #produtos{
-        height: 60vh;
+        height: 66vh;
     }
 
     #home .dir{
