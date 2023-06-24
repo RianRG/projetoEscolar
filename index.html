@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="./js/main.js" defer></script>
+    <title>Teste</title>
+</head>
+<body>
+
+    <div class="branco">
+        <h1>Nossa loja, seu lugar.</h1>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+            <h1>Lar<span>ens</span></h1>
+            </div>
+            <div class="bar">
+
+            <div class="menu"></div>
+            </div> <!--bar-->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#empresa">Empresa</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+                <div class="esq">
+
+                    <div class="cont">
+                        <h1>Os melhores fones<br>da Europa!</h1>
+                        <p>Este site de vendas pode te oferecer os melhores
+                         fones de toda a <br>Europa, tendo o poder de entrega em todo o Mundo!</p>
+                    </div>
+                    
+                </div>
+                <div class="dir">
+                    
+                    <div class="cont">
+                        <img src="./imgs/headbranco.png" alt="Headphone Ilustrativo">
+                    </div>
+
+                </div> <!--dir-->
+        </section> <!--home-->
+
+        <section id="produtos">
+            <div class="quad"></div>
+            <div class="prin">
+                <img src="./imgs/headbranco.png" alt="Imagem ilustrativa">
+            </div>
+
+            <div class="coluna">
+                 <div class="bola">
+                    <img src="./imgs/headpreto.png" alt="Imagem Ilustrativa" onclick="trocarImg('./imgs/headpreto.png')">
+                 </div>
+                 <div class="bola">
+                    <img src="./imgs/headbranco.png" alt="Imagem Ilustrativa" onclick="trocarImg('./imgs/headbranco.png')">
+                 </div>
+                 <div class="bola">
+                    <img src="./imgs/headpretofull.png" alt="Imagem Ilustrativa" onclick="trocarImg('./imgs/headpretofull.png')">
+                 </div>
+            </div> <!--coluna-->
+        </section>
+
+        <section id="empresa">
+    
+            <div class="container">
+                <div class="caixa">
+                    <h2>Entregas</h2>
+                    <i class='bx bxs-plane-land'></i>
+                    <p>Realizamos entregas ao redor do mundo,
+                        com o objetivo de ampliar nossa acessibilidade para
+                        que todos tenham as mesmas oportunidades.
+                    </p>
+                </div>
+                <div class="caixa">
+                    <h2>Vantagens</h2>
+                    <i class='bx bxs-check-shield'></i>
+                    <p>As vantagens de realizar compras conosco são
+                        diversas, tanto em fatos como segurança e de acessibilidade 
+                        ou de facilidade e comprometimento.
+                    </p>
+                </div>
+                <div class="caixa">
+                    <h2>Info</h2>
+                    <i class='bx bxs-info-circle'></i>
+                    <p>Nossas informações estão contidas
+                        em nosso rodapé, ou em nosso documento privado
+                        que está em nosso outro site.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="sobre">
+            <footer>
+
+                <div> <!--div para deixar a logo e os links sociais em coluna-->
+
+                
+                <div class="logo">
+                    <h1>Lar<span>ens</span></h1>
+                    </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/rianrod3/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com/nedzN" target="_blank"><i class='bx bxl-github'></i></a>
+                </div>
+                </div>
+                    
+                    <div class="listona">
+
+                <div class="listinha">
+                    <h2>Sede</h2>
+                    <hr>
+                <ul>
+                    <li><a href="#">Contratamentos</a></li>
+                    <li><a href="#">Pesquisas</a></li>
+                    <li><a href="#">Vendas</a></li>
+                    <li><a href="#">Endereço</a></li>
+                </ul>
+                </div>
+
+                <div class="listinha">
+                    <h2>Produtos</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Termos</a></li>
+                        <li><a href="#">Sua conta</a></li>
+                        <li><a href="#">Conversar</a></li>
+                        <li><a href="#">Garantia</a></li>
+                    </ul>
+                </div>
+                <div class="listinha">
+                    <h2>Social</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Ligação</a></li>
+                        <li><a href="#">Sms</a></li>
+                        <li><a href="#">Videocall</a></li>
+                    </ul>
+                </div>
+                <div class="listinha">
+                    <h2>Arquitetura</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Vendedores</a></li>
+                        <li><a href="#">Programadores</a></li>
+                        <li><a href="#">Agência</a></li>
+                        <li><a href="#">Instrutores</a></li>
+                    </ul>
+                </div>
+
+                </div>
+
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
