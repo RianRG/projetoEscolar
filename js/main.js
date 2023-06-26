@@ -1,6 +1,6 @@
 const bt = document.querySelector('.bar');
 
-bt.addEventListener('click', () =>{
+bt.addEventListener('click', function menuzin(){
     document.querySelector('header').classList.toggle('ativei');
 })
 

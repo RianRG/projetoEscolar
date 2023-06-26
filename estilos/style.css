@@ -452,11 +452,11 @@ footer .logo{
     }
 
     header.ativei .menu{
-        transform: rotate(40deg);
+        transform: rotate(140deg);
     }
 
     header.ativei .menu::after{
-        transform: rotate(-80deg);
+        transform: rotate(80deg);
         position: relative;
         bottom: 6px;
     }
