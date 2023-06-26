@@ -1,3 +1,5 @@
+console.log('Rian Gomes, INF11')
+
 const bt = document.querySelector('.bar');
 
 bt.addEventListener('click', function menuzin(){
