@@ -270,7 +270,6 @@ nav a:hover::after{
     flex-direction: column;
     justify-content: space-around;
     box-shadow: 12px 4px rgb(17, 90, 84);
-    
 }
 
 .caixa i{
