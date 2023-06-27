@@ -221,7 +221,7 @@ nav a:hover::after{
 
 .bola:hover{
     transform: translateX(-7px);
-    box-shadow: 8px 0 rgb(73, 65, 190);
+    box-shadow: 8px 0 rgb(73, 65, 190), 10px 10px inset rgb(40, 110, 116);
 }
 
 .bola img{
@@ -236,7 +236,7 @@ nav a:hover::after{
 }
 
 #empresa{
-    padding: 130px 20px; 
+    padding: 130px 1%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,8 +244,8 @@ nav a:hover::after{
 }
 
 .container{
-    width: 85%;
-    padding: 35px;
+    width: 94%;
+    padding: 3%;
     background-color: var(--prin);
     display: flex;
     justify-content: center;
@@ -332,9 +332,9 @@ footer{
 
 
 .listinha a:hover{
-    transform: translateX(-10px);
+    transform: translateX(-6px);
     color: white;
-    filter: drop-shadow(10px 0 1px rgb(42, 161, 190))
+    filter: drop-shadow(10px 0 1px rgb(42, 161, 190, .60))
 }
 
 .listinha hr{
@@ -475,7 +475,7 @@ footer .logo{
     .coluna .bola:hover{
         transform: translateX(0);
         transform: translateY(-7px);
-        box-shadow: 0 8px rgb(73, 65, 190);
+        box-shadow: 0 8px rgb(73, 65, 190), 7px 7px inset rgb(40, 110, 116);
     }
 }
 
