@@ -484,6 +484,10 @@ footer .logo{
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
     }
+
+    .container{
+        width: 350px;
+    }
 }
 
 @media (max-width: 388px){
@@ -500,11 +504,11 @@ footer .logo{
     }
 
     .container{
-        width: 300px;
+        width: 250px;
     }
 
     .caixa{
-        width: 95%;
+        width: 85%;
     }
 }
 
