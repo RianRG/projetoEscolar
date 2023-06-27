@@ -239,8 +239,18 @@ nav a:hover::after{
     padding: 130px 1%; 
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: 40px;
     align-items: center;
     background-color: var(--bgcor);
+}
+
+#empresa button{
+    padding: 5px 20px;
+}
+
+.caixa.escurin{
+    background-color: black;
 }
 
 .container{
