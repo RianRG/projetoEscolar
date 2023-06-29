@@ -116,7 +116,7 @@ nav a:hover::after{
     transition: .4s;
     display: none;
     cursor: pointer ;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*pode ser transparent também*/
+    -webkit-tap-highlight-color: transparent
 }
 
 .menu{
@@ -444,6 +444,53 @@ footer .logo{
     font-weight: 600;
 }
 
+#inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25em;
+    padding: 0 20px;
+}
+
+#inicio .retan{
+    width: 1000px;
+    max-height: 520px;
+    background-color: rgb(164, 223, 223);
+    padding: 40px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0 7px rgb(116, 116, 116);
+    margin-top: 200px;
+}
+
+.retan h1{
+    margin-bottom: 20px;
+    color: var(--txtcor);
+}
+
+.retan h1::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1.5px;
+    margin-left: 52%;
+    background-color: orangered;
+}
+
+#dois{
+    height: 40em;
+}
+
+#dois .texto{
+    width: 50%;
+    height: 40em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
 @media(max-width:1108px){
     #itens{
         grid-gap: 40px;
@@ -639,13 +686,14 @@ footer .logo{
     .caixa{
         width: 85%;
     }
+
+    .branco h1{
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 314px){
     footer .listona{
         grid-template-columns: repeat(1, 1fr);
-    }
-    .branco h1{
-        font-size: 1rem;
     }
 }
