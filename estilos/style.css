@@ -36,6 +36,7 @@ body{
     font-size: .7rem;
     height: 70px;
     background-color: var(--bgcor);
+    padding: 0 10px;
 }
 
 header{
@@ -192,7 +193,7 @@ nav a:hover::after{
      -300px 220px rgb(25, 81, 85), -400px 320px rgb(129, 31, 129), -500px 420px rgb(109, 186, 209);
 }
 
-.coluna{
+aside{
     position: absolute;
     right: 70px;
     z-index: 2;
@@ -221,7 +222,7 @@ nav a:hover::after{
 
 .bola:hover{
     transform: translateX(-7px);
-    box-shadow: 8px 0 rgb(73, 65, 190), 10px 10px inset rgb(40, 110, 116);
+    box-shadow: 8px 0 rgb(73, 65, 190);
 }
 
 .bola img{
@@ -367,6 +368,93 @@ footer .logo{
     margin-bottom: 10px;
 }
 
+#itens{
+    display: grid;
+    padding: 30px 80px;
+    background-color: var(--bgcor);
+    grid-template-columns: repeat(3, 0fr);
+    justify-content: center;
+    grid-gap: 40px;
+    width: 100%;
+}
+
+.compra h5{
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+#itens .compra{
+    width: 300px;
+    background-color: white;
+    height: 420px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 20px;
+}
+.compra p{
+    font-size: .9rem;
+}
+
+.compra img{
+    max-width: 230px;
+    background-color: rgb(226, 226, 226);
+    transition: .4s;
+}
+.compra img:hover{
+    transform: scale(1.18) rotate(5deg);
+}
+.compra .imfone{
+    overflow: hidden;
+}
+
+.compra button{
+    width: 60%;
+    padding: 6px 0;
+    margin-top: 20px;
+    outline: none;
+    border: 2px solid white;
+    background-color: rgb(48, 113, 143);
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.texto h4::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1.5px;
+    background-color: orangered;
+    margin-bottom: 5px;
+}
+
+.compra button:hover{
+    width: 75%;
+    background-color: orangered;
+    box-shadow: 0 5px rgb(48, 113, 143);
+}
+
+.compra .texto{
+    text-align: start;
+}
+
+.compra button a{
+    display: block;
+    color: white;
+    font-weight: 600;
+}
+
+@media(max-width:1108px){
+    #itens{
+        grid-gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #itens .compra{
+        width: 250px;
+    }
+}
+
 @media (max-width: 990px){
     footer{
         flex-direction: column;
@@ -379,6 +467,19 @@ footer .logo{
         flex-direction: column;
         width: 380px;
     }
+
+    #itens{
+        grid-row-gap: 35px;
+    }
+
+    #itens .compra{
+        width: 200px;
+        height: 400px;
+    }
+
+    .imfone img{
+        padding-right: 50px;
+    }
 }
 
 @media (max-width: 800px){
@@ -388,7 +489,7 @@ footer .logo{
         --subfnt: 1.4rem;
     }
 
-    .coluna{
+    aside{
         right: 30px;
     }
 
@@ -425,7 +526,7 @@ footer .logo{
         max-width: 400px;
     }
 
-    .coluna .bola img{
+    aside .bola img{
         max-width: 80px;
     }
 }
@@ -469,6 +570,19 @@ footer .logo{
     footer .listona{
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .imfone img{
+        padding-right: 0;
+    }
+
+    #itens .compra{
+        width: 250px;
+        height: 420px;
+    }
+    #itens{
+        grid-gap: 30px;
+        grid-template-columns: repeat(2, 0fr);
+    }
 }
 
 @media (max-width: 598px){
@@ -477,15 +591,19 @@ footer .logo{
         flex-direction: column;
     }
     
-    #produtos .coluna{
+    #produtos aside{
         position: static;
         flex-direction: row;
     }
 
-    .coluna .bola:hover{
+    aside .bola:hover{
         transform: translateX(0);
         transform: translateY(-7px);
-        box-shadow: 0 8px rgb(73, 65, 190), 7px 7px inset rgb(40, 110, 116);
+        box-shadow: 0 8px rgb(73, 65, 190);
+    }
+
+    #itens{
+        grid-template-columns: repeat(1, 0fr);
     }
 }
 
