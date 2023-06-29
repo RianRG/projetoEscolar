@@ -116,6 +116,7 @@ nav a:hover::after{
     transition: .4s;
     display: none;
     cursor: pointer ;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*pode ser transparent também*/
 }
 
 .menu{
