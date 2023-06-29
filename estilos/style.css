@@ -645,4 +645,7 @@ footer .logo{
     footer .listona{
         grid-template-columns: repeat(1, 1fr);
     }
+    .branco h1{
+        font-size: 1rem;
+    }
 }
