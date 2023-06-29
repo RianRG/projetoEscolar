@@ -449,7 +449,7 @@ footer .logo{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 25em;
+    max-height: 100vh;
     padding: 0 20px;
 }
 
@@ -462,6 +462,8 @@ footer .logo{
     border-radius: 30px;
     box-shadow: 0 7px rgb(116, 116, 116);
     margin-top: 200px;
+    overflow: hidden;
+    position: relative;
 }
 
 .retan h1{
@@ -478,17 +480,89 @@ footer .logo{
     background-color: orangered;
 }
 
+.retan .circ{
+    border-radius: 50%;
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background-color: transparent;
+    backdrop-filter: saturate(0);
+    top: 120px;
+    left: -80px;
+    z-index: 0;
+    box-shadow: 10px 10px 10px black;
+}
+
 #dois{
-    height: 40em;
+    max-height: 45em;
+    background-color: rgb(104, 59, 148);
+    margin-top: 100px;
+    display: flex;
+    position: relative;
+    padding: 20px;
 }
 
 #dois .texto{
-    width: 50%;
+    width: 60%;
     height: 40em;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 50px;
+    color: white;
+}
+
+#dois .texto::after{
+    content: "";
+    display: block;
+    height: 200px;
+    width: 3px;
+    background-color: orangered;
+    transform: rotate(10deg);
+    margin: 0 40px;
+}
+
+#dois h3{
+    font-size: 1.7rem;
+}
+
+#dois article{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+article i{
+    font-size: 4rem;
+    color: white;
+    z-index: 5;
+    transition: .4s;
+}
+
+.bgi{
+    position: absolute;
+    top: -30px;
+    pointer-events: none;
+}
+.bgi i{
+    font-size: 10rem;
+    opacity: 10%;
+    filter: blur(2px);
+    color: white;
+    opacity: 0;
+    position: relative;
+    right: 50px;
+}
+
+article a i:hover .bgi i{
+    opacity: 15%;
+}
+
+article a i:hover{
+    color: aqua;
+    transform: translateY(-5px);
 }
 
 @media(max-width:1108px){
@@ -535,6 +609,27 @@ footer .logo{
         --granfnt: 2.6rem;
         --pfnt: .8rem;
         --subfnt: 1.4rem;
+    }
+
+    #dois{
+        flex-direction: column;
+    }
+
+    #dois article{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #dois .texto{
+        flex-direction: column;
+    }
+
+    #dois .texto::after{
+        width: 80%;
+        height: 3px;
+        transform: rotate(3deg);
+        margin-top: 20%;
+        margin-left: 50%;
     }
 
     aside{
@@ -663,6 +758,21 @@ footer .logo{
 
     .container{
         width: 350px;
+    }
+
+    .bgi i{
+        font-size: 4rem;
+        top: 20px;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 410px){
+    #dois article{
+        display: grid;
+        grid-template-columns: repeat(2, 0fr);
+        margin-top: 50px;
     }
 }
 
