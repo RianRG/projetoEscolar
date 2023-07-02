@@ -10,7 +10,7 @@
 }
 
 *::selection{
-    background-color: var(--accent);
+    background-color: rgb(100, 69, 74);
     color: #fff;
 }
 
@@ -167,7 +167,8 @@ nav a:hover::after{
 }
 
 .dir img{
-    filter: drop-shadow(7px 7px rgb(48, 173, 90));
+    filter: drop-shadow(12px 12px rgb(48, 173, 90));
+    
 }
 
 .esq .cont h1{
@@ -264,13 +265,19 @@ aside{
     justify-content: center;
     gap: 70px;
     align-items: center;
+    box-shadow: 0 -20px rgb(81, 54, 153), 0 -40px rgb(57, 39, 110),
+     0 -60px rgb(37, 25, 71), 0 -20px inset rgb(41, 102, 117), 0 -40px inset rgb(30, 75, 87);
+    border-radius: 190px;
+    overflow: hidden;
 }
 
 .caixa:nth-child(2){
     background-color: rgb(233, 198, 235);
+    margin-bottom: 110px;
 }
 .caixa:nth-child(3){
     background-color: rgb(198, 235, 201);
+    margin-top: 80px;
 }
 
 .caixa{
@@ -403,7 +410,7 @@ footer .logo{
     transition: .4s;
 }
 .compra img:hover{
-    transform: scale(1.18) rotate(5deg);
+    transform: scale(1.12) rotate(3deg);
 }
 .compra .imfone{
     overflow: hidden;
@@ -450,8 +457,9 @@ footer .logo{
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-height: 100vh;
+    height: 40em;
     padding: 0 20px;
+    background-color: var(--bgcor);
 }
 
 #inicio .retan{
@@ -462,9 +470,9 @@ footer .logo{
     text-align: center;
     border-radius: 30px;
     box-shadow: 0 7px rgb(116, 116, 116);
-    margin-top: 200px;
     overflow: hidden;
     position: relative;
+    border-top: 3px dashed var(--accent);
 }
 
 .retan h1{
@@ -495,12 +503,11 @@ footer .logo{
 }
 
 #dois{
-    max-height: 45em;
+    min-height: 40em;
     background-color: rgb(104, 59, 148);
-    margin-top: 100px;
     display: flex;
     position: relative;
-    padding: 20px;
+    padding: 15px;
 }
 
 #dois .texto{
@@ -540,7 +547,10 @@ article i{
     color: white;
     z-index: 5;
     transition: .4s;
-    -webkit-tap-highlight-color: transparent
+}
+
+article a{
+    -webkit-tap-highlight-color: transparent;
 }
 
 .bgi{
@@ -589,7 +599,17 @@ article a i:hover{
 @media (max-width: 906px){
     .container{
         flex-direction: column;
-        width: 380px;
+        width: 85%;
+    }
+
+    .caixa:nth-child(2){
+        margin-bottom: 0;
+        margin-left: 10%;
+    }
+
+    .caixa:last-child{
+        margin-top: 0;
+        margin-right: 10%;
     }
 
     #itens{
@@ -759,7 +779,7 @@ article a i:hover{
     }
 
     .container{
-        width: 350px;
+        width: 95%;
     }
 
     .bgi i{
@@ -771,6 +791,10 @@ article a i:hover{
 }
 
 @media (max-width: 410px){
+    #dois{
+        padding: 60px 10px;
+        height: 60em;
+    }
     #dois article{
         display: grid;
         grid-template-columns: repeat(2, 0fr);
@@ -792,7 +816,7 @@ article a i:hover{
     }
 
     .container{
-        width: 250px;
+        width: 90%;
     }
 
     .caixa{
