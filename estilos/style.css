@@ -89,6 +89,7 @@ nav a{
     color: white;
     font-weight: 600;
     transition: .4s;
+    -webkit-tap-highlight-color: transparent
 }
 
 nav a:hover{
@@ -539,6 +540,7 @@ article i{
     color: white;
     z-index: 5;
     transition: .4s;
+    -webkit-tap-highlight-color: transparent
 }
 
 .bgi{
