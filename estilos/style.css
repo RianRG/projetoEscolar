@@ -32,6 +32,7 @@ body{
 .branco{
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
     font-size: .7rem;
     height: 70px;
@@ -459,7 +460,10 @@ footer .logo{
     width: 100%;
     height: 40em;
     padding: 0 20px;
-    background-color: var(--bgcor);
+    background-image: url(../imgs/liquid-cheese.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #inicio .retan{
@@ -481,12 +485,25 @@ footer .logo{
 }
 
 .retan h1::after{
-    content: "";
-    display: block;
+    content: '|';
+    animation: muda .5s infinite;
+}
+
+@keyframes muda{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.retan hr{
+    color: orangered;
+    margin-top: -15px;
+    margin-bottom: 10px;
     width: 80px;
-    height: 1.5px;
-    margin-left: 52%;
-    background-color: orangered;
+    margin-left: 50%;
 }
 
 .retan .circ{
@@ -575,6 +592,98 @@ article a i:hover .bgi i{
 article a i:hover{
     color: aqua;
     transform: translateY(-5px);
+} 
+
+#hist{
+    padding: 80px 30px;
+}
+
+#hist h1{
+    font-size: var(--granfnt);
+    color: var(--txtcor);
+    margin-left: 40%;
+
+}
+
+#hist h1::before{
+    content: "";
+    display: block;
+    width: 20%;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+#hist .caixas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 140px;
+    margin-top: 100px;
+}
+
+article .imgex{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 10px 0 var(--prin);
+}
+
+article:last-child img{
+    bottom: 20px;
+    width: 200px;
+    left: -30px
+}
+
+.imgex{
+    position: relative;
+    bottom: 80px;
+    left: 50px;
+}
+
+#hist article{
+    width: 300px;
+    background-color: var(--bgcor);
+    border-radius: 40px;
+    padding: 30px;
+}
+
+#hist article::after{
+    content: '';
+    display: block;
+    width: 200px;
+    height: 5px;
+    background-color: brown;
+    position: relative;
+    left: 240px;
+    bottom: 200px;
+}
+
+#hist article img{
+    max-width: 250px;
+    position: relative;
+    right: 50px;
+}
+
+#hist article:nth-child(3)::after{
+    left: -600px;
+    bottom: -120px;
+    transform: rotate(-20deg);
+    width: 600px;
+}
+
+#hist article:last-child::after{
+    width: 0;
+    height: 0;
+}
+
+/* media */
+
+@media (max-width: 1228px){
+    #hist .caixas{
+        transform: scale(.8);
+        justify-content: center;
+    }
 }
 
 @media(max-width:1108px){
@@ -593,6 +702,12 @@ article a i:hover{
     footer{
         flex-direction: column;
         gap: 50px;
+    }
+
+    #hist .caixas{
+        transform: scale(.7);
+        margin: 0;
+        gap: 80px;
     }
 }
 
@@ -631,6 +746,24 @@ article a i:hover{
         --granfnt: 2.6rem;
         --pfnt: .8rem;
         --subfnt: 1.4rem;
+    }
+
+    #hist .caixas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #hist article:nth-child(3)::after{
+        left: 200px;
+        transform: rotate(0);
+        width: 200px;
+        bottom: 170px;
+
+    }
+
+    #hist article:nth-child(2)::after{
+        left: -200px;
+        bottom: -70px;
+        transform: rotate(-30deg);
     }
 
     #dois{
@@ -778,6 +911,33 @@ article a i:hover{
         gap: 50px;
     }
 
+    #hist .caixas{
+        grid-template-columns: repeat(1, 0fr);
+        margin-top: -130px;
+    }
+
+    #hist article::after{
+        height: 0;
+        width: 0;
+    }
+
+    #hist article::before{
+        content: '';
+        display: block;
+        width: 150px;
+        height: 5px;
+        background-color: brown;
+        position: relative;
+        left: -70px;
+        bottom: 50px;
+        transform: rotate(90deg);
+    }
+
+    #hist article:first-child::before{
+        height: 0;
+        width: 0;
+    }
+
     .container{
         width: 95%;
     }
@@ -825,6 +985,9 @@ article a i:hover{
 
     .branco h1{
         font-size: 1rem;
+    }
+    :root{
+        --granfnt: 2rem;
     }
 }
 

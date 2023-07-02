@@ -15,3 +15,16 @@ function trocarImg(img){
         document.querySelector('.prin').classList.remove('animei');
     }, 400)
 }
+
+// typewritter
+const frase = document.querySelector('.retan h1');
+escreve(frase);
+function escreve(elemento){
+    const texto = elemento.innerHTML.split('');
+    elemento.innerHTML='';
+    texto.forEach((letra, i) =>{
+        setTimeout((texto) =>{
+            elemento.innerHTML+=letra;
+        }, 90*i)
+    })
+}
