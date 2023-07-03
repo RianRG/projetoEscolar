@@ -596,12 +596,12 @@ article a i:hover{
 
 #hist{
     padding: 80px 30px;
+    background-color: rgb(149, 194, 194);
 }
 
 #hist h1{
     font-size: var(--granfnt);
     color: var(--txtcor);
-    margin-left: 40%;
 
 }
 
@@ -609,8 +609,9 @@ article a i:hover{
     content: "";
     display: block;
     width: 20%;
-    height: 3px;
-    background-color: var(--accent);
+    height: 4px;
+    border-radius: 70px;
+    background-color: orangered;
 }
 
 #hist .caixas{
@@ -627,6 +628,17 @@ article .imgex{
     width: 150px;
     height: 150px;
     box-shadow: 10px 0 var(--prin);
+}
+
+#hist article p::before{
+    content: '';
+    display: block;
+    height: 40px;
+    width: 100px;
+    border-bottom: 4px solid purple;
+    position: absolute;
+    transform: translate(75%, -170%);
+    border-radius: 50%;
 }
 
 article:last-child img{
@@ -646,6 +658,7 @@ article:last-child img{
     background-color: var(--bgcor);
     border-radius: 40px;
     padding: 30px;
+    box-shadow: -5px 0 purple, 5px 0 aqua;
 }
 
 #hist article::after{
@@ -666,10 +679,10 @@ article:last-child img{
 }
 
 #hist article:nth-child(3)::after{
-    left: -600px;
+    left: -700px;
     bottom: -120px;
     transform: rotate(-20deg);
-    width: 600px;
+    width: 700px;
 }
 
 #hist article:last-child::after{

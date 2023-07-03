@@ -16,15 +16,18 @@ function trocarImg(img){
     }, 400)
 }
 
-// typewritter
+// maquina de escrever
+
 const frase = document.querySelector('.retan h1');
 escreve(frase);
+
 function escreve(elemento){
     const texto = elemento.innerHTML.split('');
     elemento.innerHTML='';
-    texto.forEach((letra, i) =>{
+
+    texto.forEach((letra, k) =>{
         setTimeout((texto) =>{
             elemento.innerHTML+=letra;
-        }, 90*i)
+        }, 90*k)
     })
 }
