@@ -19,15 +19,27 @@ function trocarImg(img){
 // maquina de escrever
 
 const frase = document.querySelector('.retan h1');
-escreve(frase);
+maquina(frase);
 
-function escreve(elemento){
+function maquina(elemento){
     const texto = elemento.innerHTML.split('');
     elemento.innerHTML='';
-
     texto.forEach((letra, k) =>{
         setTimeout((texto) =>{
             elemento.innerHTML+=letra;
         }, 90*k)
     })
 }
+
+// slider
+// queria fazer um slide vertical mas n dava pelo tamanho dos textoskjjjkkk
+
+const btDir = document.querySelector('#coment .dir');
+const btEsq = document.querySelector('#coment .esq');
+btDir.addEventListener('click', () =>{
+    document.querySelector('#coment .bloco').classList.add('esquerda');
+})
+
+btEsq.addEventListener('click', () =>{
+    document.querySelector('#coment .bloco').classList.remove('esquerda');
+})
