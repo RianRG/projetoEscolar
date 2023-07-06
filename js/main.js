@@ -24,6 +24,7 @@ maquina(frase);
 function maquina(elemento){
     const texto = elemento.innerHTML.split('');
     elemento.innerHTML='';
+
     texto.forEach((letra, k) =>{
         setTimeout((texto) =>{
             elemento.innerHTML+=letra;
