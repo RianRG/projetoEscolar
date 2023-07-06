@@ -179,23 +179,84 @@ nav a:hover::after{
 }
 
 #produtos{
-    height: 50em;
+    height: 43em;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     background-color: rgb(43, 80, 102);
+    position: relative;
 }
 
-.quad{
+#produtos article{
     position: absolute;
-    background-color: rgb(236, 108, 61);
-    width: 320px;
-    height: 320px;
-    right: 80px;
+    width: 24rem;
+    top: 24%;
+    left: 1%;
+    background-color: rgb(22, 72, 85);
+    padding: 0;
+    z-index: 2;
+}
+
+#produtos article p{
+    position: relative;
+    left: 30%;
+    color: white;
+    font-size: 1.1rem;
+}
+
+#produtos article a{
+    font-weight: 600;
+    color: var(--prin);
+}
+
+#produtos article a:hover{
+    text-decoration: underline;
+}
+
+#produtos .quad{
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 10px solid aqua;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    bottom: 25%;
+    right: 32%;
     transform: rotate(40deg);
-    box-shadow: -100px 75px rgb(23, 114, 156), -200px 175px rgb(41, 126, 112) ,
-     -300px 220px rgb(25, 81, 85), -400px 320px rgb(129, 31, 129), -500px 420px rgb(109, 186, 209);
+}
+
+#produtos .quad::after{
+    content: '';
+    display: block;
+    background-color: transparent;
+    width: 130px;
+    height: 130px;
+    position: relative;
+    top: 20%;
+    right: 200%;
+    border: 10px solid orangered;
+    
+}
+
+#produtos hr{
+    width: 80%;
+    height: 4px;
+    border-radius: 40px;
+    background-color: orangered;
+    border: none;
+    position: absolute;
+    bottom: 6%;
+}
+
+#produtos hr.vert{
+    width: 4px;
+    height: 300px;
+    left: 12%;
+    bottom: 12%;
+    border: 4px dashed orangered;
+    background-color: transparent;
 }
 
 #produtos aside{
@@ -776,6 +837,7 @@ article:last-child img{
     border-radius: 10px;
     cursor: pointer;
     transition: .4s;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #coment button:hover, #coment button:focus{
@@ -799,6 +861,7 @@ article:last-child img{
     rotate: 10deg;
     margin-top: 200px;
     margin-left: -250px;
+    border-bottom: 4px dashed pink;
 }
 
 
@@ -863,7 +926,7 @@ article:last-child img{
 
 .listra article p{
     color: white;
-    font-size: var(--pfnt);
+    font-size: 1rem;  ;
 }
 
 /* media */
@@ -884,6 +947,12 @@ article:last-child img{
 
     #itens .compra{
         width: 250px;
+    }
+}
+
+@media (max-width: 1044px){
+    #produtos article{
+        top: 4%;
     }
 }
 
@@ -1112,7 +1181,15 @@ article:last-child img{
     #produtos{
         flex-direction: column;
     }
+
+    #produtos article{
+        width: 12rem;
+    }
     
+    #produtos article p{
+        font-size: var(--pfnt);
+    }
+
     #produtos aside{
         position: static;
         flex-direction: row;
@@ -1199,9 +1276,24 @@ article:last-child img{
         grid-template-columns: repeat(2, 0fr);
         margin-top: 50px;
     }
+    
+    .container .caixa{
+        margin: 0;
+    }
 }
 
 @media (max-width: 388px){
+
+
+    #produtos article p{
+        left: 25%;
+    }
+
+    #produtos article{
+        top: 2%;
+        padding: 0;
+        width: 220px;
+    }
 
     #home .dir img{
         width: 280px;
