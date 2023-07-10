@@ -259,6 +259,31 @@ nav a:hover::after{
     background-color: transparent;
 }
 
+/* scrollreveal */
+
+[data-anim="top"]{
+    opacity: 0;
+    transition: .8s;
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anim="dir"]{
+    opacity: 0;
+    transition: .8s;
+    transform: translate3d(100px, 0, 0);
+}
+
+[data-anim="esq"]{
+    opacity: 0;
+    transition: .8s;
+    transform: translate3d(-100px, 0, 0);
+}
+
+[data-anim].animei{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
 #produtos aside{
     position: absolute;
     right: 70px;
@@ -284,6 +309,7 @@ nav a:hover::after{
     background-color: var(--accent);
     border-radius: 50%;
     transition: .4s;
+    cursor: pointer;
 }
 
 .bola:hover{
@@ -586,6 +612,7 @@ footer .logo{
     background-color: rgb(104, 59, 148);
     display: flex;
     position: relative;
+    overflow: hidden;
     padding: 15px;
 }
 
@@ -701,7 +728,7 @@ article .imgex{
     display: block;
     height: 40px;
     width: 100px;
-    border-bottom: 4px solid purple;
+    border-bottom: 4px solid var(--prin);
     position: absolute;
     transform: translate(75%, -170%);
     border-radius: 50%;
@@ -724,7 +751,7 @@ article:last-child img{
     background-color: var(--bgcor);
     border-radius: 40px;
     padding: 30px;
-    box-shadow: -5px 0 purple, 5px 0 aqua;
+    box-shadow: -5px 0 var(--accent), 5px 0 aqua;
 }
 
 #hist article::after{
@@ -752,8 +779,7 @@ article:last-child img{
 }
 
 #hist article:last-child::after{
-    width: 0;
-    height: 0;
+    display: none;
 }
 
 #coment{

@@ -8,14 +8,36 @@ bt.addEventListener('click', function menuzin(){
 
 function trocarImg(img){
     document.querySelector('.prin img').src=(img);
-
+    
     document.querySelector('.prin').classList.add('animei');
-
+    
     setTimeout(() =>{
         document.querySelector('.prin').classList.remove('animei');
     }, 400)
 }
+//scrollreveal
 
+const alvo = document.querySelectorAll('[data-anim]');
+
+function scrollRevela(elemento){
+    const windowTop = window.pageYOffset + window.innerHeight*0.75;
+    alvo.forEach((elemento) =>{
+
+        if((windowTop)>elemento.offsetTop){
+            elemento.classList.add('animei');
+        } else{
+            elemento.classList.remove('animei');
+        }
+    })
+}
+
+scrollRevela();
+
+if(alvo.length){
+    window.addEventListener('scroll', function(){
+        scrollRevela();
+    });
+}
 // maquina de escrever
 
 const frase = document.querySelector('.retan h1');
@@ -24,7 +46,7 @@ maquina(frase);
 function maquina(elemento){
     const texto = elemento.innerHTML.split('');
     elemento.innerHTML='';
-
+    
     texto.forEach((letra, k) =>{
         setTimeout((texto) =>{
             elemento.innerHTML+=letra;
