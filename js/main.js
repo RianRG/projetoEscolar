@@ -19,11 +19,11 @@ function trocarImg(img){
 
 const alvo = document.querySelectorAll('[data-anim]');
 
-function scrollRevela(elemento){
+function scrollRev(elemento){
     const windowTop = window.pageYOffset + window.innerHeight*0.75;
-    alvo.forEach((elemento) =>{
 
-        if((windowTop)>elemento.offsetTop){
+    alvo.forEach((elemento) =>{
+        if(windowTop>elemento.offsetTop){
             elemento.classList.add('animei');
         } else{
             elemento.classList.remove('animei');
@@ -31,12 +31,11 @@ function scrollRevela(elemento){
     })
 }
 
-scrollRevela();
-
+scrollRev();
 if(alvo.length){
-    window.addEventListener('scroll', function(){
-        scrollRevela();
-    });
+    window.addEventListener('scroll', () =>{
+        scrollRev();
+    })
 }
 // maquina de escrever
 

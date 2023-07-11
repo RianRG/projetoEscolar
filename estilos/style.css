@@ -548,10 +548,14 @@ footer .logo{
     width: 100%;
     height: 40em;
     padding: 0 20px;
-    background-image: url(../imgs/liquid-cheese.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+}
+
+#inicio img{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 1380px;
+    filter: brightness(30%) hue-rotate(90deg);
 }
 
 #inicio .retan{
@@ -688,6 +692,8 @@ article a i:hover{
     background-color: rgb(149, 194, 194);
     max-height: 100em;
     box-shadow: 0 -20px purple, 0 -30px aqua, 0 -40px greenyellow, 0 -50px yellow;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 #hist h1{
@@ -790,6 +796,8 @@ article:last-child img{
     flex-direction: column;
     background-color: rgb(255, 196, 0);
     box-shadow: 0 -20px orange, 0 -30px red, 0 -40px purple, 0 -50px aqua;
+    overflow: hidden;
+    max-width: 100%;
 }
 
 #coment .bloco{
@@ -903,6 +911,22 @@ article:last-child img{
     text-shadow: 1px 1px 20px white;
 }
 
+.listra li::after{
+    content: '';
+    display: block;
+    background-color: var(--prin);
+    width: 0;
+    height: 1.5px;
+    transition: .4s;
+    margin-left: 50%;
+
+}
+
+.listra li:hover::after{
+    width: 100%;
+    margin-left: 0;
+}
+
 .listra li:nth-child(2){
     margin-left: 70px;
 }
@@ -946,7 +970,7 @@ article:last-child img{
     font-weight: 800;
 }
 
-.listra article a:hover{
+.listra article p a:hover{
     text-decoration: underline;
 }
 
