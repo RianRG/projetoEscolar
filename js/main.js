@@ -37,22 +37,19 @@ if(alvo.length){
     })
 }
 // maquina de escrever
-
 const frase = document.querySelector('.retan h1');
 
 function maquina(elemento){
-    const texto = elemento.innerHTML.split('');
+    const letra = elemento.innerHTML.split('');
     elemento.innerHTML='';
-    texto.forEach((letra, i) =>{
-        setTimeout((texto) => {
-            elemento.innerHTML+=letra;
-        }, 120*i);
+    letra.forEach((cont, i) =>{
+        setTimeout((letra) =>{
+            elemento.innerHTML+=cont;
+        }, 120*i)
     })
-
 }
 
 maquina(frase);
-
 // slider
 // queria fazer um slide vertical mas n dava pelo tamanho dos textoskjjjkkk
 
