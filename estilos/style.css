@@ -9,6 +9,11 @@
     scroll-behavior: smooth;
 }
 
+section{
+    max-width: 100%;
+    overflow: hidden;
+}
+
 *::selection{
     background-color: rgb(100, 69, 74);
     color: #fff;
@@ -342,10 +347,6 @@ nav a:hover::after{
     padding: 5px 20px;
 }
 
-.caixa.escurin{
-    background-color: black;
-}
-
 .container{
     width: 94%;
     padding: 3%;
@@ -360,6 +361,9 @@ nav a:hover::after{
     overflow: hidden;
 }
 
+.caixa:first-child{
+    background-color: white;
+}
 .caixa:nth-child(2){
     background-color: rgb(233, 198, 235);
     margin-bottom: 110px;
@@ -369,12 +373,11 @@ nav a:hover::after{
     margin-top: 80px;
 }
 
-.caixa{
+#empresa .caixa{
     width: 310px;
     min-width: 100px;
     min-height: 350px;
     padding: 20px;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -1022,7 +1025,7 @@ article:last-child img{
 @media (max-width: 906px){
     .container{
         flex-direction: column;
-        width: 85%;
+        width: 75%;
     }
 
     .caixa:nth-child(2){
@@ -1361,7 +1364,7 @@ article:last-child img{
     }
 
     .caixa{
-        width: 85%;
+        max-width: 85%;
     }
 
     .branco h1{

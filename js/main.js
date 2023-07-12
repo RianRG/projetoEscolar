@@ -19,14 +19,13 @@ function trocarImg(img){
 
 const alvo = document.querySelectorAll('[data-anim]');
 
-function scrollRev(elemento){
+function scrollRev(){
     const windowTop = window.pageYOffset + window.innerHeight*0.75;
-
-    alvo.forEach((elemento) =>{
-        if(windowTop>elemento.offsetTop){
-            elemento.classList.add('animei');
+    alvo.forEach((alvo) =>{
+        if(windowTop>alvo.offsetTop){
+            alvo.classList.add('animei');
         } else{
-            elemento.classList.remove('animei');
+            alvo.classList.remove('animei');
         }
     })
 }
@@ -40,18 +39,19 @@ if(alvo.length){
 // maquina de escrever
 
 const frase = document.querySelector('.retan h1');
-maquina(frase);
 
 function maquina(elemento){
     const texto = elemento.innerHTML.split('');
     elemento.innerHTML='';
-    
-    texto.forEach((letra, k) =>{
-        setTimeout((texto) =>{
+    texto.forEach((letra, i) =>{
+        setTimeout((texto) => {
             elemento.innerHTML+=letra;
-        }, 90*k)
+        }, 120*i);
     })
+
 }
+
+maquina(frase);
 
 // slider
 // queria fazer um slide vertical mas n dava pelo tamanho dos textoskjjjkkk
