@@ -37,6 +37,7 @@ if(alvo.length){
     })
 }
 // maquina de escrever
+
 const frase = document.querySelector('.retan h1');
 
 function maquina(elemento){

@@ -268,18 +268,21 @@ nav a:hover::after{
 
 [data-anim="top"]{
     opacity: 0;
+    filter: hue-rotate(270deg);
     transition: .8s;
     transform: translate3d(0, -50px, 0);
 }
 
 [data-anim="dir"]{
     opacity: 0;
+    filter: hue-rotate(270deg);
     transition: .8s;
     transform: translate3d(100px, 0, 0);
 }
 
 [data-anim="esq"]{
     opacity: 0;
+    filter: hue-rotate(270deg);
     transition: .8s;
     transform: translate3d(-100px, 0, 0);
 }
@@ -287,6 +290,7 @@ nav a:hover::after{
 [data-anim].animei{
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    filter: hue-rotate(0);
 }
 
 #produtos aside{
@@ -556,8 +560,8 @@ footer .logo{
 #inicio img{
     position: fixed;
     z-index: -1;
-    top: 0;
-    width: 1380px;
+    top: -200px;
+    width: 2100px;
     filter: brightness(30%) hue-rotate(90deg);
 }
 
@@ -891,7 +895,7 @@ article:last-child img{
 }
 
 .fundomax .listra{
-    width: 1700px;
+    width: 2100px;
     padding: 40px 0;
     background-color: purple;
     z-index: -1;
@@ -1189,7 +1193,7 @@ article:last-child img{
     }
 
     #itens .compra{
-        width: 250px;
+        width: 100%;
         height: 420px;
     }
     #itens{
@@ -1225,7 +1229,8 @@ article:last-child img{
     }
 
     .listra h1{
-        margin-left: -90px;
+        margin-left: -155px;
+        margin-top: 25px;
     }
 }
 
