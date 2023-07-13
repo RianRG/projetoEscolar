@@ -53,13 +53,43 @@ function maquina(elemento){
 maquina(frase);
 // slider
 // queria fazer um slide vertical mas n dava pelo tamanho dos textoskjjjkkk
+// const bloco = document.querySelectorAll('#coment .conteudo');
+// const btDir = document.querySelector('#coment .dir');
+// const btEsq = document.querySelector('#coment .esq');
+// btDir.addEventListener('click', () =>{
+//     bloco.forEach((bloco) =>{
+//         bloco.style.transform="translateX(-400px)";
+//     })
+// })
 
+// btEsq.addEventListener('click', () =>{
+//     bloco.forEach((bloco) =>{
+//         bloco.style.transform="translateX(400px)";
+//     })
+// })
+
+
+const bloco = document.querySelectorAll('#coment .conteudo');
 const btDir = document.querySelector('#coment .dir');
 const btEsq = document.querySelector('#coment .esq');
-btDir.addEventListener('click', () =>{
-    document.querySelector('#coment .bloco').classList.add('esquerda');
-})
+let translateValue = 0;
+const divWidth = bloco[0].offsetWidth+100;
+const maxTranslateValue = -(bloco.length -1) * divWidth;
 
-btEsq.addEventListener('click', () =>{
-    document.querySelector('#coment .bloco').classList.remove('esquerda');
-})
+btDir.addEventListener('click', () => {
+  if (translateValue > maxTranslateValue) {
+    translateValue -= divWidth;
+    bloco.forEach((bloco) => {
+      bloco.style.transform = `translateX(${translateValue}px)`;
+    });
+  }
+});
+
+btEsq.addEventListener('click', () => {
+  if (translateValue < 0) {
+    translateValue += divWidth;
+    bloco.forEach((bloco) => {
+      bloco.style.transform = `translateX(${translateValue}px)`;
+    });
+  }
+});
