@@ -887,20 +887,25 @@ article:last-child img{
 #coment .fundomax{
     width: 102%;
     overflow: hidden;
-    height: 45em;
+    height: 65em;
 }
 
 .fundomax .listra{
-    width: 2100px;
-    padding: 40px 0;
+    width: 3400px;
+    padding: 30px 0;
     background-color: purple;
     z-index: -1;
     rotate: 10deg;
-    margin-top: 200px;
+    margin-top: 400px;
     margin-left: -250px;
     border-bottom: 4px dashed pink;
 }
 
+#coment .fundomax h1{
+    position: relative;
+    left: 10%;
+    margin-top: 1.6%;
+}
 
 .listra li{
     font-size: 1.6rem;
@@ -911,7 +916,7 @@ article:last-child img{
 }
 
 .listra li:hover{
-    text-shadow: 1px 1px 20px white;
+    text-shadow: 1px 1px 30px white;
 }
 
 .listra li::after{
@@ -942,7 +947,6 @@ article:last-child img{
 
 .listra ul{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
@@ -950,8 +954,10 @@ article:last-child img{
 
 .listra article{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 30px;
     gap: 10rem;
     width: 100vw;
     margin-left: 240px;
@@ -1225,8 +1231,8 @@ article:last-child img{
     }
 
     .listra h1{
-        margin-left: -155px;
-        margin-top: 25px;
+        margin-left: -110px;
+        top: -12px;
     }
 }
 

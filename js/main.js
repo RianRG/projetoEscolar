@@ -1,11 +1,13 @@
 console.log('Rian Gomes, INF11')
 
+//bt menu
 const bt = document.querySelector('.bar');
 
 bt.addEventListener('click', function menuzin(){
     document.querySelector('header').classList.toggle('ativei');
 })
 
+//troca img
 function trocarImg(img){
     document.querySelector('.prin img').src=(img);
     
@@ -41,55 +43,40 @@ if(alvo.length){
 const frase = document.querySelector('.retan h1');
 
 function maquina(elemento){
-    const letra = elemento.innerHTML.split('');
+    const letras = elemento.innerHTML.split('');
     elemento.innerHTML='';
-    letra.forEach((cont, i) =>{
-        setTimeout((letra) =>{
+    letras.forEach((cont, k) =>{
+        setTimeout((letras) =>{
             elemento.innerHTML+=cont;
-        }, 120*i)
+        }, 120*k)
     })
 }
 
 maquina(frase);
 // slider
-// queria fazer um slide vertical mas n dava pelo tamanho dos textoskjjjkkk
-// const bloco = document.querySelectorAll('#coment .conteudo');
-// const btDir = document.querySelector('#coment .dir');
-// const btEsq = document.querySelector('#coment .esq');
-// btDir.addEventListener('click', () =>{
-//     bloco.forEach((bloco) =>{
-//         bloco.style.transform="translateX(-400px)";
-//     })
-// })
+// queria inovar fazendo um slide vertical mas n dava pelo tamanho dos textoskjjjkkk
 
-// btEsq.addEventListener('click', () =>{
-//     bloco.forEach((bloco) =>{
-//         bloco.style.transform="translateX(400px)";
-//     })
-// })
-
-
-const bloco = document.querySelectorAll('#coment .conteudo');
-const btDir = document.querySelector('#coment .dir');
 const btEsq = document.querySelector('#coment .esq');
-let translateValue = 0;
+const btDir = document.querySelector('#coment .dir');
+const bloco = document.querySelectorAll('#coment .conteudo');
+let valor = 0;
 const divWidth = bloco[0].offsetWidth+100;
-const maxTranslateValue = -(bloco.length -1) * divWidth;
+const limite = -(bloco.length-1)*divWidth;
 
-btDir.addEventListener('click', () => {
-  if (translateValue > maxTranslateValue) {
-    translateValue -= divWidth;
-    bloco.forEach((bloco) => {
-      bloco.style.transform = `translateX(${translateValue}px)`;
-    });
-  }
-});
+btDir.addEventListener('click', () =>{
+    if(valor>limite){
+        valor-=divWidth;
+        bloco.forEach((bloco) =>{
+            bloco.style.transform=`translateX(${valor}px)`
+        })
+    }
+})
 
-btEsq.addEventListener('click', () => {
-  if (translateValue < 0) {
-    translateValue += divWidth;
-    bloco.forEach((bloco) => {
-      bloco.style.transform = `translateX(${translateValue}px)`;
-    });
-  }
-});
+btEsq.addEventListener('click', () =>{
+    if(valor<0){
+        valor+=divWidth;
+        bloco.forEach((bloco) =>{
+            bloco.style.transform=`translateX(${valor}px)`
+        })
+    }
+})
