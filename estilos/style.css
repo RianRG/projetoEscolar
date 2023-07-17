@@ -33,6 +33,7 @@ section{
 
 body{
     overflow-x: hidden;
+    background-color: var(--bgcor);
 }
 
 .branco{
@@ -49,11 +50,12 @@ body{
 header{
     width: 100%;
     position: sticky;
-    top: 0;
+    top: -1px;
     right: 0;
     padding: 14px 0;
     background-color: #285551;
     z-index: 10;
+    transition: .4s;
 }
 
 nav{
@@ -861,7 +863,7 @@ article:last-child img{
     min-width: 70vw;
     transition: .5s;
     position: relative;
-    left: 3%;
+    left: 5%;
 }
 
 #coment button{
@@ -887,7 +889,7 @@ article:last-child img{
 #coment .fundomax{
     width: 102%;
     overflow: hidden;
-    height: 65em;
+    height: 55em;
 }
 
 .fundomax .listra{

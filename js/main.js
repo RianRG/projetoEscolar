@@ -38,21 +38,44 @@ if(alvo.length){
         scrollRev();
     })
 }
-// maquina de escrever
+
+//header anim
+const imgfundo = document.querySelector('#inicio img');
+const header = document.querySelector('header');
+let windowTop;
+const headerAnim = () =>{
+
+    if(windowTop>114){
+        header.style.background='rgba(52, 70, 106, .7)';
+        header.style.backdropFilter='brightness(70%)'
+    } else{
+        header.style.background='#285551';
+    }
+}
+
+headerAnim();
+
+window.addEventListener('scroll', () =>{
+    windowTop=pageYOffset
+    headerAnim();
+})
+
+//maquina de escrever
 
 const frase = document.querySelector('.retan h1');
 
 function maquina(elemento){
-    const letras = elemento.innerHTML.split('');
+    const letra = elemento.innerHTML.split('');
     elemento.innerHTML='';
-    letras.forEach((cont, k) =>{
-        setTimeout((letras) =>{
+    letra.forEach((cont, k) =>{
+        setTimeout((letra) =>{
             elemento.innerHTML+=cont;
         }, 120*k)
     })
 }
 
 maquina(frase);
+
 // slider
 // queria inovar fazendo um slide vertical mas n dava pelo tamanho dos textoskjjjkkk
 
@@ -63,20 +86,22 @@ let valor = 0;
 const divWidth = bloco[0].offsetWidth+100;
 const limite = -(bloco.length-1)*divWidth;
 
+const activeSlide = () =>{
+    bloco.forEach((bloco) =>{
+        bloco.style.transform=`translateX(${valor}px)`
+    })
+}
+
 btDir.addEventListener('click', () =>{
     if(valor>limite){
         valor-=divWidth;
-        bloco.forEach((bloco) =>{
-            bloco.style.transform=`translateX(${valor}px)`
-        })
+        activeSlide();
     }
 })
-
 btEsq.addEventListener('click', () =>{
     if(valor<0){
         valor+=divWidth;
-        bloco.forEach((bloco) =>{
-            bloco.style.transform=`translateX(${valor}px)`
-        })
+        activeSlide();
     }
 })
+
