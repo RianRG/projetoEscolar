@@ -47,7 +47,7 @@ const headerAnim = () =>{
 
     if(windowTop>114){
         header.style.background='rgba(52, 70, 106, .7)';
-        header.style.backdropFilter='brightness(70%)'
+        header.style.backdropFilter='brightness(70%) blur(2px)';
     } else{
         header.style.background='#285551';
     }

@@ -479,7 +479,7 @@ footer .logo{
     display: grid;
     padding: 30px 80px;
     background-color: var(--bgcor);
-    grid-template-columns: repeat(3, 0fr);
+    grid-template-columns: repeat(4, 0fr);
     justify-content: center;
     grid-gap: 40px;
     width: 100%;
@@ -491,7 +491,7 @@ footer .logo{
 }
 
 #itens .compra{
-    width: 300px;
+    width: 100%;
     background-color: white;
     height: 420px;
     padding: 12px;
@@ -561,6 +561,7 @@ footer .logo{
 
 #inicio img{
     position: fixed;
+    pointer-events: none;
     z-index: -1;
     top: -200px;
     width: 2100px;
@@ -621,7 +622,6 @@ footer .logo{
 }
 
 #dois{
-    min-height: 40em;
     background-color: rgb(104, 59, 148);
     display: flex;
     position: relative;
@@ -806,6 +806,7 @@ article:last-child img{
     background-color: rgb(255, 196, 0);
     box-shadow: 0 -20px orange, 0 -30px red, 0 -40px purple, 0 -50px aqua;
     overflow: hidden;
+    max-height: 75em;
     max-width: 100%;
 }
 
@@ -992,6 +993,18 @@ article:last-child img{
 
 /* media */
 
+@media (max-width: 1182px){
+    #itens{
+        grid-template-columns: repeat(3, 0fr);
+        gap: 4rem;
+    }
+
+    #itens .compra{
+        width: 280px;
+    }
+}
+
+
 @media (max-width: 1228px){
     #hist .caixas{
         transform: scale(.8);
@@ -999,21 +1012,18 @@ article:last-child img{
     }
 }
 
-@media(max-width:1108px){
-    #itens{
-        grid-gap: 40px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #itens .compra{
-        width: 250px;
-    }
-}
-
 @media (max-width: 1044px){
     #produtos article{
         top: 4%;
+    }
+}
+@media (max-width: 1020px){
+    #itens{
+        gap: 3rem;
+    }
+
+    #itens .compra{
+        width: 100%;
     }
 }
 
@@ -1047,17 +1057,18 @@ article:last-child img{
     }
 
     #itens{
-        grid-row-gap: 35px;
+        gap: 2.3rem;
     }
 
     #itens .compra{
-        width: 200px;
-        height: 400px;
+        width: 100%;
     }
 
-    .imfone img{
-        padding-right: 50px;
+    #itens .compra img{
+        max-width: 200px;
     }
+    
+
 }
 
 @media (max-width: 800px){
@@ -1069,6 +1080,10 @@ article:last-child img{
 
     #hist .caixas{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #itens{
+        gap: 1.1rem;
     }
 
     #hist article:nth-child(3)::after{
@@ -1197,11 +1212,23 @@ article:last-child img{
     }
 
     #itens .compra{
-        width: 100%;
+        width: 260px;
         height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem;
     }
+
+    #itens .compra .texto{
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+    }
+
     #itens{
-        grid-gap: 30px;
+        gap: 3rem;
         grid-template-columns: repeat(2, 0fr);
     }
 }
@@ -1321,7 +1348,6 @@ article:last-child img{
 @media (max-width: 410px){
     #dois{
         padding: 60px 10px;
-        height: 60em;
     }
     #dois article{
         display: grid;
