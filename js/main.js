@@ -1,5 +1,15 @@
 console.log('Rian Gomes, INF11')
 
+//mecanica produtos
+
+const compra = document.querySelectorAll('#itens .compra');
+
+compra.forEach((e) =>{
+    e.addEventListener('click', () =>{
+        e.classList.add('abre');
+    })
+})
+
 //bt menu
 const bt = document.querySelector('.bar');
 
@@ -104,4 +114,3 @@ btEsq.addEventListener('click', () =>{
         activeSlide();
     }
 })
-
