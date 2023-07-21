@@ -109,9 +109,9 @@ nav a::after{
     content: "";
     display: block;
     width: 20px;
-    height: 1.5px;
+    height: 1px;
     transition: .4s;
-    background-color: orangered;
+    background-color: var(--accent);
 }
 
 nav a:hover::after{
@@ -172,13 +172,24 @@ nav a:hover::after{
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .dir img{
-    filter: drop-shadow(12px 12px rgb(48, 173, 90));
-    
+    filter: drop-shadow(7px 7px rgb(48, 173, 90));
+    animation: rota 2s infinite ease-in-out;
 }
+
+@keyframes rota{
+    0%, 100%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+}
+
+
 
 .esq .cont h1{
     font-size: var(--granfnt);
@@ -244,7 +255,6 @@ nav a:hover::after{
     top: 20%;
     right: 200%;
     border: 10px solid orangered;
-    
 }
 
 #produtos hr{
@@ -260,10 +270,19 @@ nav a:hover::after{
 #produtos hr.vert{
     width: 4px;
     height: 300px;
-    left: 12%;
-    bottom: 12%;
     border: 4px dashed orangered;
+    left: 12%;
+    bottom: 12%; 
     background-color: transparent;
+}
+
+@keyframes engorda{
+    0%,100%{
+      
+    }
+    50%{
+    
+    }
 }
 
 /* scrollreveal */
@@ -371,7 +390,7 @@ nav a:hover::after{
     box-shadow: 0 -20px rgb(81, 54, 153), 0 -40px rgb(57, 39, 110),
      0 -60px rgb(37, 25, 71), 0 -20px inset rgb(41, 102, 117), 0 -40px inset rgb(30, 75, 87);
     border-radius: 190px;
-    overflow: hidden;
+    height: 400px;
 }
 
 .caixa:first-child{
@@ -502,6 +521,7 @@ footer .logo{
     width: 100%;
     position: relative;
     right: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #itens .compra .texto{
@@ -574,7 +594,7 @@ footer .logo{
     pointer-events: all;
 }
 
-#itens .compra i{
+#itens .compra i.bx.bx-x{
     position: absolute;
     font-size: 3rem;
     color: var(--accent);
@@ -585,9 +605,17 @@ footer .logo{
     cursor: pointer;
 }
 
-#itens .compra.abre i{
+#itens .compra.abre i.bx.bx-x{
     opacity: 1;
     transform: rotate(0);
+}
+
+#itens .compra i.bx.bx-chevrons-left{
+    color: white;
+    font-size: 3rem;
+    rotate: 180deg;
+    position: absolute;
+    bottom: 20px;
 }
 
 #itens.display > *{
@@ -599,6 +627,7 @@ footer .logo{
 #itens .imfone img{
     max-width: 200px;
     transition: .4s;
+    z-index: 5;
 }
 
 #itens .imfone:hover img{
@@ -954,7 +983,6 @@ article:last-child img{
 
 #coment .fundomax{
     width: 102%;
-    overflow: hidden;
     height: 55em;
 }
 
@@ -1105,6 +1133,7 @@ article:last-child img{
     .container{
         flex-direction: column;
         width: 75%;
+        height: 70em;
     }
 
     .caixa:nth-child(2){

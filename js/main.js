@@ -1,7 +1,7 @@
 console.log('Rian Gomes, INF11')
 
 //mecanica produtos
-const icone = document.querySelectorAll('#itens .compra i');
+const icone = document.querySelectorAll('#itens .compra i.bx.bx-x');
 const compra = document.querySelectorAll('#itens .compra');
 
 compra.forEach((e) =>{
@@ -16,7 +16,7 @@ compra.forEach((e) =>{
                 document.querySelector('#itens').classList.remove('display');
             })
         })
-    })
+    }) 
 })
 
 
