@@ -7,7 +7,6 @@ bt.addEventListener('click', function menuzin(){
     document.querySelector('header').classList.toggle('ativei');
 })
 //scrollreveal
-
 const alvo = document.querySelectorAll('[data-anim]');
 
 function scrollRev(){
@@ -46,4 +45,4 @@ headerAnim();
 window.addEventListener('scroll', () =>{
     windowTop=pageYOffset
     headerAnim();
-})
+})  
