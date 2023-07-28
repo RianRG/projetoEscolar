@@ -177,19 +177,7 @@ nav a:hover::after{
 
 .dir img{
     filter: drop-shadow(7px 7px rgb(48, 173, 90));
-    animation: rota 2s infinite ease-in-out;
 }
-
-@keyframes rota{
-    0%, 100%{
-        transform: rotate(10deg);
-    }
-    50%{
-        transform: rotate(0deg);
-    }
-}
-
-
 
 .esq .cont h1{
     font-size: var(--granfnt);
@@ -654,12 +642,17 @@ footer .logo{
     padding: 0 20px;
 }
 
-#inicio img{
+#inicio .fundofone{
+    background-image: url(../imgs/fonfundoamarelo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     position: fixed;
     pointer-events: none;
+    height: 100vh;
+    width: 101vw;
+    top: -1px;
     z-index: -1;
-    top: -200px;
-    width: 2100px;
     filter: brightness(30%) hue-rotate(90deg);
 }
 

@@ -5,28 +5,32 @@ const btEsq = document.querySelector('#coment .esq');
 const btDir = document.querySelector('#coment .dir');
 const bloco = document.querySelectorAll('#coment .conteudo');
 let valor = 0;
-const divWidth = bloco[0].offsetWidth+100;
-const limite = -(bloco.length-1)*divWidth;
+const divWidth = bloco[0].offsetWidth + 100;
+const limite = -(bloco.length - 1) * divWidth;
 
-const activeSlide = () =>{
-    bloco.forEach((bloco) =>{
-        bloco.style.transform=`translateX(${valor}px)`
-    })
+const activeSlide = () => {
+  bloco.forEach((bloco) => {
+    bloco.style.transform = `translateX(${valor}px)`
+  })
 }
 
-btDir.addEventListener('click', () =>{
-    if(valor>limite){
-        valor-=divWidth;
-        activeSlide();
-    }
-})
-btEsq.addEventListener('click', () =>{
-    if(valor<0){
-        valor+=divWidth;
-        activeSlide();
-    }
-})
+btDir.addEventListener('click', () => {
+  if (valor > limite) {
+    valor -= divWidth;
+  } else {
+    valor = 0; // Volta para o primeiro slide
+  }
+  activeSlide();
+});
 
+btEsq.addEventListener('click', () => {
+  if (valor < 0) {
+    valor += divWidth;
+  } else {
+    valor = limite; // Volta para o último slide
+  }
+  activeSlide();
+});
 //maquina de escrever
 
 const frase = document.querySelector('.retan h1');
