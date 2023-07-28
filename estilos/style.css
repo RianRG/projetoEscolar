@@ -1105,7 +1105,7 @@ article:last-child img{
     }
 
     #itens .compra img{
-        max-width: 18vw;
+        max-width: 19vw;
     }
 }
 
@@ -1270,11 +1270,11 @@ article:last-child img{
     }
 
     header.ativei .menu{
-        transform: rotate(140deg);
+        transform: rotate(130deg);
     }
 
     header.ativei .menu::after{
-        transform: rotate(80deg);
+        transform: rotate(90deg);
         position: relative;
         bottom: 6px;
     }
