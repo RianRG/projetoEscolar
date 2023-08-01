@@ -504,7 +504,6 @@ footer .logo{
 #itens .compra{
     background-color: white;
     height: 420px;
-    padding: 12px;
     border-radius: 20px;
     width: 100%;
     position: relative;
@@ -567,7 +566,7 @@ footer .logo{
     display: block;
     height: 1.5px;
     width: 55%;
-    background-color: var(--prin);
+    background-color: orangered;
 }
 
 #itens .compra.abre .texto{
@@ -576,6 +575,9 @@ footer .logo{
 
 #itens .compra.abre{
     padding-right: 105%;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-bottom: 12px;
     z-index: 2;
     width: 160%;
     right: 30%;
