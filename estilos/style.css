@@ -606,12 +606,6 @@ footer .logo{
     bottom: 20px;
 }
 
-#itens.display > *{
-    pointer-events: none;
-}
-    
-
-
 #itens .imfone img{
     max-width: 200px;
     transition: .4s;
