@@ -4,11 +4,12 @@ const compras = document.querySelectorAll('#itens .compra');
 
 compras.forEach((e) =>{
     e.addEventListener('click', () =>{
-        compras.forEach((compra) =>{
-            if(compra!==e){
-                compra.classList.remove('abre');
+
+        for(const itens of compras){
+            if(itens!==e){
+                itens.classList.remove('abre');
             }
-        })
+        }
         e.classList.add('abre');
         icone.forEach((i) =>{
             i.addEventListener('click', (event) =>{
