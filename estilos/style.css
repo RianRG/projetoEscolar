@@ -344,6 +344,7 @@ nav a:hover::after{
 
 .bola img{
     max-width: 103px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .bola:nth-child(2){
@@ -571,6 +572,7 @@ footer .logo{
 
 #itens .compra.abre .texto{
     opacity: 1;
+    transition: .8s;
 }
 
 #itens .compra.abre{
@@ -581,7 +583,6 @@ footer .logo{
     z-index: 2;
     width: 160%;
     right: 30%;
-    pointer-events: all;
 }
 
 #itens .compra i.bx.bx-x{
