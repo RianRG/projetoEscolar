@@ -48,6 +48,8 @@ btEsq.addEventListener('click', () => {
   
   activeSlide();
 });
+
+
 //maquina de escrever
 
 const frase = document.querySelector('.retan h1');
