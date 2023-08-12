@@ -345,6 +345,7 @@ nav a:hover::after{
 
 .bola img{
     max-width: 103px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .bola:nth-child(2){
