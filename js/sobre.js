@@ -2,7 +2,7 @@
 // queria inovar fazendo um slide vertical mas n dava pelo tamanho dos textoskk
 
 const btEsq = document.querySelector('#coment .esq');
-const btDir = document.querySelector('#coment .dir');
+
 const bloco = document.querySelectorAll('#coment .conteudo');
 let valor = 0;
 const divWidth = bloco[0].offsetWidth + 100;
