@@ -18,7 +18,7 @@ app.use((req, res, next) =>{
 })
 
 //add a user
-app.post('/user', async (req, res) =>{
+app.post('/', async (req, res) =>{
   try{
     const user = await UserModel.create(req.body);
     res.status(201).json(user);
@@ -28,7 +28,7 @@ app.post('/user', async (req, res) =>{
 })
 
 //list users
-app.get('/user', async (req, res) =>{
+app.get('/', async (req, res) =>{
   try{
     const user = await UserModel.find({});
     res.status(200).json(user);
@@ -38,7 +38,7 @@ app.get('/user', async (req, res) =>{
 })
 
 //search a user
-app.get('/user/:id', async (req, res) =>{
+app.get('/:id', async (req, res) =>{
   try{
     const { id } = req.params;
     const user = await UserModel.findById(id);
@@ -49,7 +49,7 @@ app.get('/user/:id', async (req, res) =>{
 })
 
 //change values
-app.patch('/user/:id', async (req, res) =>{
+app.patch('/:id', async (req, res) =>{
   try{
     const { id } = req.params;
     const user = await UserModel.findByIdAndUpdate(id, req.body, {new: true});
@@ -60,7 +60,7 @@ app.patch('/user/:id', async (req, res) =>{
 })
 
 //delete user
-app.delete('/user/:id', async (req, res) =>{
+app.delete('/:id', async (req, res) =>{
   try{
     const { id } = req.params;
     const user = await UserModel.findByIdAndRemove(id);
