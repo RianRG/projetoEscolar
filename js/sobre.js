@@ -66,21 +66,17 @@ const activeSlide = () => {
   })
 }
 //button resets
-btEsq.style.opacity='0';
-btEsq.style.cursor='default';
-
+btEsq.setAttribute("disabled", "true");
 //button slides mechanics
 btDir.addEventListener('click', () => {
   if (valor > limite) {
     valor -= divWidth;
   }
-  console.log(valor);
+
   if(valor==-divWidth*(bloco.length-1)){
-    btDir.style.opacity='0';
-    btDir.style.cursor='default';
+    btDir.setAttribute('disabled', 'true');
   } else if(valor!=0){
-    btEsq.style.opacity='1';
-    btEsq.style.cursor='pointer';
+    btEsq.removeAttribute('disabled');
   }
 
   activeSlide();
@@ -91,14 +87,12 @@ btEsq.addEventListener('click', () => {
     valor += divWidth;
   }
   if(valor==0){
-    btEsq.style.opacity='0';
-    btEsq.style.cursor='default';
+    btEsq.setAttribute('disabled', 'true');
   } else if(valor!=1791){
-    btDir.style.opacity='1';
-    btDir.style.cursor='pointer';
+    btDir.removeAttribute('disabled');
   }
   
   activeSlide();
 });
 
-}, 1000);
+}, 100);

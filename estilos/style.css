@@ -960,16 +960,19 @@ article:last-child img{
     outline: none;
     border: 2px dashed black;
     border-radius: 10px;
-    cursor: pointer;
     transition: .4s;
     -webkit-tap-highlight-color: transparent;
 }
 
-#coment button:hover, #coment button:focus{
+#coment button:enabled:hover, #coment button:enabled:focus{
     background-color: darkgoldenrod;
     color: white;
     padding: 3px 15px;
+    cursor: pointer;
+}
 
+#coment button:disabled{
+    opacity: 0;
 }
 
 #coment .fundomax{
