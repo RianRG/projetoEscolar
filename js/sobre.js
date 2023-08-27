@@ -95,4 +95,4 @@ btEsq.addEventListener('click', () => {
   activeSlide();
 });
 
-}, 100);
+}, 1000);
