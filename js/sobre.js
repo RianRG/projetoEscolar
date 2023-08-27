@@ -20,7 +20,7 @@ maquina(frase);
 //api users
 
 const getUsers = async () =>{
-  const fetchUsers = await fetch('http://localhost:5000/user');
+  const fetchUsers = await fetch('https://api-users.cyclic.app');
   const res = await fetchUsers.json();
   return res;
 }
