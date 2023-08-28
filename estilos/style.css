@@ -964,8 +964,8 @@ article:last-child img{
     -webkit-tap-highlight-color: transparent;
 }
 
-#coment button:enabled:hover, #coment button:enabled:focus{
-    background-color: darkgoldenrod;
+#coment button:enabled:hover{
+    background-color: rgb(184, 72, 11);
     color: white;
     padding: 3px 15px;
     cursor: pointer;

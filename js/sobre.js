@@ -24,7 +24,7 @@ const getUsers = async () =>{
   const res = await fetchUsers.json();
   return res;
 }
-// console.log(getUsers());
+
 const slideArea = document.querySelector('.bloco');
 const comentsCreate = async () =>{
   const users = await getUsers();
@@ -47,52 +47,53 @@ const comentsCreate = async () =>{
 comentsCreate();
 
 // slider
-// queria inovar fazendo um slide vertical mas n dava pelo tamanho dos textoskk
 setTimeout(() =>{
 
 
-const btEsq = document.querySelector('#coment .esq');
-const btDir = document.querySelector('#coment .dir');
-const bloco = document.querySelectorAll('#coment .conteudo');
-let valor = 0;
-const divWidth = bloco[0].offsetWidth + 100;
-const limite = -(bloco.length - 1) * divWidth;
-console.log(bloco);
+  const btEsq = document.querySelector('#coment .esq');
+  const btDir = document.querySelector('#coment .dir');
+  const block = document.querySelectorAll('#coment .conteudo');
+  let value = 0;
+  const divWidth = block[0].offsetWidth + 100;
+  const limite = -(block.length - 1) * divWidth;
+  console.log(block);
 
 
-const activeSlide = () => {
-  bloco.forEach((bloco) => {
-    bloco.style.transform = `translateX(${valor}px)`
-  })
-}
-//button resets
-btEsq.setAttribute("disabled", "true");
-//button slides mechanics
-btDir.addEventListener('click', () => {
-  if (valor > limite) {
-    valor -= divWidth;
+  const activeSlide = () => {
+    block.forEach((block) => {
+      block.style.transform = `translateX(${value}px)`
+    })
   }
 
-  if(valor==-divWidth*(bloco.length-1)){
-    btDir.setAttribute('disabled', 'true');
-  } else if(valor!=0){
-    btEsq.removeAttribute('disabled');
-  }
+  //button resets
+  btEsq.setAttribute("disabled", "true");
 
-  activeSlide();
-});
+  //button slides mechanics
+  btDir.addEventListener('click', () => {
+    if (value > limite) {
+      value -= divWidth;
+    }
 
-btEsq.addEventListener('click', () => {
-  if (valor < 0) {
-    valor += divWidth;
-  }
-  if(valor==0){
-    btEsq.setAttribute('disabled', 'true');
-  } else if(valor!=1791){
-    btDir.removeAttribute('disabled');
-  }
-  
-  activeSlide();
-});
+    if(value==-divWidth*(block.length-1)){
+      btDir.setAttribute('disabled', 'true');
+    } else if(value!=0){
+      btEsq.removeAttribute('disabled');
+    }
 
-}, 1000);
+    activeSlide();
+  });
+
+  btEsq.addEventListener('click', () => {
+    if (value < 0) {
+      value += divWidth;
+    }
+    if(value==0){
+      btEsq.setAttribute('disabled', 'true');
+    } else if(value!=1791){
+      btDir.removeAttribute('disabled');
+    }
+    
+    activeSlide();
+  });
+
+}, 3000);
