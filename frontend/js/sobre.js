@@ -47,11 +47,18 @@ const comentsCreate = async () =>{
 comentsCreate();
 
 // slider
+const btEsq = document.querySelector('#coment .esq');
+const btDir = document.querySelector('#coment .dir');
+const area = document.querySelector('#coment .bloco');
+const load = document.querySelector('#coment .loading')
+area.style.opacity=0;
+//button resets
+btEsq.setAttribute("disabled", "true");
+btDir.setAttribute("disabled", "true");
 setTimeout(() =>{
-
-
-  const btEsq = document.querySelector('#coment .esq');
-  const btDir = document.querySelector('#coment .dir');
+  load.style.opacity=0;
+  area.style.opacity=1;
+  
   const block = document.querySelectorAll('#coment .conteudo');
   let value = 0;
   const divWidth = block[0].offsetWidth + 100;
@@ -65,8 +72,7 @@ setTimeout(() =>{
     })
   }
 
-  //button resets
-  btEsq.setAttribute("disabled", "true");
+  btDir.removeAttribute("disabled");
 
   //button slides mechanics
   btDir.addEventListener('click', () => {

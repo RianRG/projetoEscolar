@@ -952,6 +952,27 @@ article:last-child img{
     left: 5%;
 }
 
+#coment .loading{
+    background-color: transparent;
+    border-radius: 50%;
+    border-top: 3px white solid;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: -1500px;
+    z-index: 100;
+    animation: loop .7s infinite linear;
+}
+
+@keyframes loop{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 #coment button{
     padding: 2px 10px;
     margin: 0 10px;
