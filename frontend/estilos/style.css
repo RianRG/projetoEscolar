@@ -109,14 +109,14 @@ nav a:hover{
 nav a::after{
     content: "";
     display: block;
-    width: 20px;
+    width: 20%;
     height: 1px;
     transition: .4s;
     background-color: var(--accent);
 }
 
 nav a:hover::after{
-    width: 40px;
+    width: 70%;
 }
 
 .bar{
