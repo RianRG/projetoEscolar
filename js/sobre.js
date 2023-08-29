@@ -30,7 +30,7 @@ const comentsCreate = async () =>{
   const users = await getUsers();
 
   users.forEach(item =>{
-    const { firstName, secondName, comment } = item;
+    const { firstName, secondName, password: comment } = item;
     const div = document.createElement('div');
     const h4 = document.createElement('h4');
     const p = document.createElement('p');
