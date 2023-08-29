@@ -30,14 +30,14 @@ const comentsCreate = async () =>{
   const users = await getUsers();
 
   users.forEach(item =>{
-    const { firstName, secondName, password } = item;
+    const { firstName, secondName, comment } = item;
     const div = document.createElement('div');
     const h4 = document.createElement('h4');
     const p = document.createElement('p');
 
     div.classList.add('conteudo');
     h4.innerHTML = `${firstName} ${secondName}`;
-    p.innerHTML = password
+    p.innerHTML = comment
     div.appendChild(h4);
     div.appendChild(p);
     slideArea.appendChild(div);
