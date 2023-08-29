@@ -51,13 +51,13 @@ const btEsq = document.querySelector('#coment .esq');
 const btDir = document.querySelector('#coment .dir');
 const area = document.querySelector('#coment .bloco');
 const load = document.querySelector('#coment .loading')
-area.style.opacity=0;
+
 //button resets
 btEsq.setAttribute("disabled", "true");
 btDir.setAttribute("disabled", "true");
 setTimeout(() =>{
   load.style.opacity=0;
-  area.style.opacity=1;
+  area.style.color='black';
   
   const block = document.querySelectorAll('#coment .conteudo');
   let value = 0;
