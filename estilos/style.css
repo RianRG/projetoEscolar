@@ -899,7 +899,7 @@ article:last-child img{
 	width: 80%;
 	overflow: hidden;
 	padding: 30px;
-	transition: .1s;
+	transition: .3s;
 	display: flex;
 	align-items: center;
 	gap: 100px;
@@ -958,13 +958,13 @@ article:last-child img{
 #coment .loading{
 	background-color: transparent;
 	border-radius: 50%;
-	border-top: 3px white solid;
+	border-top: 1.5px white solid;
 	height: 50px;
 	width: 50px;
 	position: absolute;
 	margin-bottom: 800px;
 	z-index: 100;
-	animation: loop .7s infinite linear;
+	animation: loop .7s infinite ease-in;
 }
 
 @keyframes loop{
