@@ -1102,7 +1102,96 @@ article:last-child img{
 	font-size: 1rem;  ;
 }
 
-/* media */
+#formContact{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 100px 40px;
+	gap: 20px;
+	background-color: rgb(170, 211, 197);
+}
+
+#formContact h1{
+	font-size: var(--granfnt);
+	rotate: -5deg;
+	color: var(--txtcor);
+	width: 50%;
+	background-color: rebeccapurple;
+	text-shadow: 2px 40px rgb(239, 149, 149), 2px 80px rgb(127, 212, 140);
+}
+
+#formContact form{
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	gap: 10px;
+	color: white;
+	font-weight: 600;
+}
+
+#formContact form input{
+	background-color: transparent;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid white;
+	padding: 4px 10px;
+	color: white;
+}
+
+#formContact form label{
+	position: relative;
+	bottom: 40px;
+	pointer-events: none;
+	transition: .4s;
+}
+
+#formContact form label[for="msg"]{
+	bottom: 130px;
+	left: 10px;
+}
+
+#formContact input:focus + label,
+#formContact input:valid + label{
+	bottom: 60px;
+}
+
+#formContact textarea:focus + label,
+#formContact textarea:valid + label{
+	bottom: 170px;
+}
+
+#formContact textarea{
+	resize: none;
+	padding: 10px;
+	background-color: transparent;
+	outline: none;
+	border: 2px solid white;
+	color: white;
+	height: 130px;
+}
+
+#formContact button{
+	outline: none;
+	background-color: transparent;
+	border: 3px solid white;
+	cursor: pointer;
+	padding: 7px 30px;
+	color: white;
+	font-weight: 600;
+	margin: 0 auto;
+	transition: .4s;
+	letter-spacing: 2px;
+}
+
+#formContact button:hover{
+	letter-spacing: 4px;
+}
+
+
+
+
+/*  =================== media ========================================= */
 
 
 
@@ -1351,6 +1440,15 @@ article:last-child img{
 
 @media (max-width: 598px){
 	
+	#formContact{
+		flex-direction: column;
+		gap: 150px;
+	}
+
+	#formContact form{
+		width: 95%;
+	}
+
 	#produtos{
 		flex-direction: column;
 	}
